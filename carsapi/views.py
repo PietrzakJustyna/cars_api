@@ -45,9 +45,11 @@ class CarsView(APIView):
             raise APIException("Such a car does not exist")
 
 
-class PopularCarsView(generics.ListCreateAPIView):
-    queryset = Car.objects.order_by('votes_num').reverse()
-    serializer_class = CarSerializer
+class PopularCarsView(APIView):
+    def get(self, request):
+        cars = Car.objects.order_by('votes_num').reverse()
+        serializer = CarSerializer(cars, many=True)
+        return Response(serializer.data)
 
 
 class Rate(APIView):

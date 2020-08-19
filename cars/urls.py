@@ -20,7 +20,7 @@ from carsapi.views import CarsView, PopularCarsView, Rate
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('cars', CarsView.as_view(), name='cars'),
-    path('popular', PopularCarsView.as_view()),
-    path('rate', Rate.as_view())
+    path('cars/', CarsView.as_view(), name='cars'),
+    path('popular/', PopularCarsView.as_view()),
+    path('rate/', Rate.as_view())
 ]
