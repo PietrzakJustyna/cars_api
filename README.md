@@ -9,15 +9,15 @@ Project was built using Django & Django Rest Framework.
 ## Docker
 Application is contenerized using Docker together with PostgreSQL database.
 To run applicaiton run following commands:
-    * `docker-compose run web python manage.py migrate` to run migraitons for db
-    *  `docker-compose up` or `docker-compose up -d`
+* `docker-compose run web python manage.py migrate` to run migraitons for db
+*  `docker-compose up` or `docker-compose up -d`
 
 To stop application use:
-    * `ctr + c` or `docker-compose down`
+* `ctr + c` or `docker-compose down`
 
 ## Testing
 Unittests are prepared and can be started with
-    `docker-compose run web python manage.py test`
+* `docker-compose run web python manage.py test`
 
 ## App description
 Following app is a simple simple REST API; a basic cars makes and models database interacting with external API.
