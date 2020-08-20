@@ -11,7 +11,7 @@ services:
       - "8000:8000"
     depends_on:
       - db
-    command: ["./wait-for-it.sh", "db:5432", "--", "python", "manage.py", "runserver"]
+    command: ["./wait-for-it.sh", "db:5432", "--", "python", "manage.py", "runserver", "0.0.0.0:8000"]
   db:
     image: postgres
     environment:
